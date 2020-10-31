@@ -1,0 +1,35 @@
+a program in c++ using function template overloading
+
+#include<iostream>
+#include<string>
+#include<conio.h>
+
+using namespace std;
+
+template<class T>
+void display(T x)
+{
+     cout<<"\nOverloaded Template display function 1: "<<x;
+}
+
+template<class T, class S>
+void display(T x, S y)
+{
+     cout<<"\nOverloaded template display function 2: "<<x<<", "<<y;
+}
+
+void display(int x)
+{
+     cout<<"\nExplicit display (overloaded generic display function): "<<x;
+}
+
+int main()
+{
+    display(100);
+    display(12.34);
+    display(100, 12.34);
+    display('c');
+    
+    getch();
+    return 0;
+} 
